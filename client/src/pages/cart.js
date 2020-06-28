@@ -20,7 +20,7 @@ export default class cart extends Component {
 
         Axios.get('/cart',{withCredentials:true}).then(res=>{
            
-          if(res.data.auth){this.props.history.push('/')}
+          if(res.data.auth){this.props.history.push('http://localhost:3000/')}
           else
           this.setState({items:res.data})
         }

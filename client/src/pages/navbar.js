@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import {Link} from 'react-router-dom'
 export default class navbar extends Component {
    handleclick=()=>{
        document.querySelector('.slidebar').classList.add('open')
@@ -15,6 +16,16 @@ componentDidMount(){
        
        })
 
+
+}
+handlecart=()=>{
+this.props.history.push('/cart')
+
+
+}
+handlelogout=()=>{
+
+  this.props.history.push('/logout')
 
 }
 componentWillReceiveProps(props){
@@ -43,10 +54,9 @@ state={}
     <div className="header-links">
         {(this.state.auth)?(
           <div>{(this.state.auth=="true")?(<div>
-             <span className="user">{this.state.name}</span>
-        <a href="/cart">Cart</a>
-        <a href="/logout" className="logout">Logout</a>
-        
+             <span className="user userval">{this.state.name}</span>
+             <span className="user" onClick={this.handlecart} name="cart">Cart</span>
+             <span className="user" onClick={this.handlelogout} name="logout">Logout</span>
           </div>):(<div> <a href="/signin">Signin</a></div>)}</div>
 
         )

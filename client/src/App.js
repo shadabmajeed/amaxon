@@ -23,7 +23,9 @@ class App extends Component {
      
      <BrowserRouter>
       <div >
-        <Navbar auth={this.state.auth}></Navbar>
+      <Route path="/"
+            render={(props)=><Navbar {...props} handlenav={this.handlenav}></Navbar>}/>
+
         <Switch>
           <Route path="/signin"
             render={(props)=><Signin {...props} handlenav={this.handlenav}></Signin>}/>

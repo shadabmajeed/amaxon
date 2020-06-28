@@ -33,10 +33,27 @@ justify-content: space-between;
 margin-right: 10px;
 
 }
+.header-links span{
+color: white;
+font-weight: bolder;
+}
+.header-links span:hover{
+    color:#ff8000;
+    cursor: pointer;
+     
+    }
+
 .user{
  font-weight: bolder;
+ font-size: 1.4rem;
     color: #ff8000; 
    padding: 5px;
+}
+.header-links .userval{
+    font-weight: bolder;
+    color: #ff8000; 
+   padding: 5px;
+
 }
 
 .logout{
@@ -71,7 +88,7 @@ padding: 1rem;
 .slidebar{
 position: fixed;
 
-width:30%;
+width:34rem;
 height: 100%;
 background-color: rgb(211, 211, 211);
 transform: translateX(-1000%);
@@ -177,7 +194,7 @@ button:hover{
 
    .indproduct img{
     height: 100%;
-     width:35vw
+     width:100%;
    }
 
    .indproduct .details, .indproduct .cart{
@@ -207,11 +224,11 @@ button:hover{
    width: 80%;
 
   }
-  .indproduct div img:hover{
+  /* .indproduct div img:hover{
    transform: scale(1.5);
   
 
-  }
+  } */
   /*Cart --------------------------------------------------------------*/
   .items{
 

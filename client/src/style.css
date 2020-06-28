@@ -1,0 +1,293 @@
+html{
+font-size: 10px;
+box-sizing: border-box;
+
+
+}
+body{
+font:1.6rem Helvetica;
+height: 100vh;
+margin: 0;
+}
+.container{
+display: grid;
+height:100%;
+grid-template-columns: 1fr;
+grid-template-rows: 20% 75% ;
+
+}
+header
+{
+    position: fixed;
+    height: 7%;
+    width: 100%;
+display: flex;
+background-color: #203040;
+justify-content: space-between;
+align-items: center;
+
+}
+.header-links div{
+display: flex;
+justify-content: space-between;
+margin-right: 10px;
+
+}
+.user{
+ font-weight: bolder;
+    color: #ff8000; 
+   padding: 5px;
+}
+
+.logout{
+    font-weight: bolder;
+    color: #ffffff; 
+}
+.brand a{
+color: #ffffff;
+font-weight: bold;
+font-size: 2.5rem;
+}
+header a{
+    text-decoration: none;
+    color: #ffffff;
+}
+footer
+{
+display: flex;
+background-color: #203040;
+justify-content:center;
+color: #ffffff;
+align-items: center;
+
+}
+.brand button{
+font-size: 2.5rem;
+background: none;
+color: #ffffff;
+border: none;
+padding: 1rem;
+}
+.slidebar{
+position: fixed;
+
+width:30%;
+height: 100%;
+background-color: rgb(211, 211, 211);
+transform: translateX(-1000%);
+
+}
+.open{
+    transform: translateX(0);
+    transition: all 0.2s;
+}
+
+
+.slidebar h1{
+font-size: 1.8rem;
+}
+.slidebar div{
+    display: flex;
+    justify-content: space-between;
+}
+.slidebar button{
+
+background: none;
+border-color:black;
+border-radius: 50%;
+margin :1rem;
+}
+
+.slidebar ul li a{
+text-decoration: none;
+color:blue
+}
+
+.slidebar ul{
+list-style: none;
+
+}
+
+button:hover{
+    outline: none;
+    margin-left:1px ;
+    padding-left: 5px;
+}
+
+.slidebar ul li:hover a{
+    padding-left:10px ;
+    }
+
+    /*HOME PAGE_________________________________________________*/
+
+    .products
+    { display: flex;
+      flex-wrap: wrap;
+      margin-top: 80px;
+      justify-content: center;
+    }
+    .product{
+        margin: 10px;
+        height: 34rem;
+        width: 25rem;
+        border-bottom:0.2rem solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .product img{
+     
+    width: 100%;
+    height: 80%;
+    }
+    .product-brand{
+     
+        font-size:1.5rem;
+        font-weight: 600;
+        color:#808080
+        }
+        .product-price{
+     
+            font-size:1.2rem;
+            font-weight: 700;
+            }
+    a{
+    text-decoration: none;
+    font-size:2rem;
+    font-weight: 700;
+    }
+    a:hover{
+        color:#ff8000
+    }
+    
+
+    /*INDIVIDUAL PRODUCT_________________________________________________________*/
+    .indproduct{
+        margin-top: 40px;
+        height: 100vh;
+        width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+   }
+
+  
+
+   .indproduct img{
+    height: 100%;
+     width:35vw
+   }
+
+   .indproduct .details, .indproduct .cart{
+  
+    margin-top: 60px;
+    
+ 
+   }
+   .details,.cart{
+   height: 14rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+   }
+   
+  .cart{
+    width: 25rem;  
+   border:0.1rem solid #808080;
+    padding: 10px;
+    font-weight:bold;
+  }
+  .button button{
+   background-color: #ff8000;
+   border-radius:0.5rem;
+   border-color: #808080;
+   width: 80%;
+
+  }
+  .indproduct div img:hover{
+   transform: scale(1.5);
+  
+
+  }
+  /*Cart --------------------------------------------------------------*/
+  .items{
+
+    margin-top: 80px;
+  
+
+}
+.cart-product{
+
+    height:8rem;
+    border:0.1rem solid #203040;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    align-items: center;
+    padding: 7px;
+}
+ 
+  .cart-product img{
+      height:8rem;
+      width: 7rem; 
+  }
+  .cart-details{
+  display: flex;
+padding: 8px;
+
+  }
+  .cart-details button{
+      background-color: #ff8000;
+      border-radius: 0.4rem;
+  }
+  .total{font-weight:bold;}
+  #checkout-button:hover{
+   background-color: #ff8000;
+
+  }
+  .payment{
+      width: 100%;
+      height:10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /*Signin________________________--------------------------_____________________*/
+
+   .signin
+   {
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+  
+   }
+  .signin .box{
+    border:0.1rem #808080 solid;
+   display: flex;
+   flex-direction: column;
+   width: 36rem;
+   height:28rem;
+   justify-content: space-around;
+   align-items: center;
+   padding: 2rem;
+  }
+  .error{
+
+    color: red;
+  }
+.box button{
+    background-color: #ff8000;
+    
+}
+.box a{
+    color: #fe0000;
+    font: bolder;
+    font-size: 1.5rem;
+}

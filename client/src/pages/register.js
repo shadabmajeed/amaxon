@@ -35,7 +35,17 @@ export default class register extends Component {
     render() {
         return (
             <div className="signin">
-               {(!this.state.reqcompleted)?(<div>Loading...........</div>):
+               {(!this.state.reqcompleted)?(
+                <div className="loading">
+                <div className="dot dot1"></div>
+                <div  className="dot dot2"></div>
+                <div  className="dot dot3"></div>
+
+
+               </div>
+            
+
+               ):
                
                (    <div  className="box">
                <h1>Register</h1>

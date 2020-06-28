@@ -32,7 +32,13 @@ export default class signin extends Component {
     render() {
         return (
             <div className="signin">
-               {(!this.state.reqcomplete)?(<div>Loading............</div>):
+               {(!this.state.reqcomplete)?(<div className="loading">
+                <div className="dot dot1"></div>
+                <div  className="dot dot2"></div>
+                <div  className="dot dot3"></div>
+
+
+               </div>):
                (
                 <div className="box">
                 <h1>LOGIN</h1>

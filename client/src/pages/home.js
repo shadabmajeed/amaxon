@@ -23,7 +23,13 @@ export default class home extends Component {
          
         return (
             <div >
-                {(!this.state.products)?(<h1>Loading</h1>):
+                {(!this.state.products)?(<div className="loading">
+                <div className="dot dot1"></div>
+                <div  className="dot dot2"></div>
+                <div  className="dot dot3"></div>
+
+
+               </div>):
                 
             ( <div className="products">
                 

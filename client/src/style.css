@@ -308,3 +308,63 @@ padding: 8px;
     font: bolder;
     font-size: 1.5rem;
 }
+
+
+/*-------------------------------------LOADING-----------------------------------*/
+.loading{
+display: flex;
+height: 100vh;
+width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color:crimson; 
+  margin:s 6px; 
+}
+
+@keyframes flow{
+   from {
+    opacity: 1;
+    transform: scale(1.2);
+   
+}
+to{
+    opacity: 0.6;
+    transform: scale(0.7);
+   
+
+
+}
+}
+
+.dot1{
+animation-name: flow;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+animation-delay: 0s;
+
+}
+.dot2{
+    animation-name: flow;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+animation-delay: 0.3s;
+
+    
+    }
+    .dot3{
+        animation-name: flow;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+animation-delay: 0.6s;
+
+        
+        }

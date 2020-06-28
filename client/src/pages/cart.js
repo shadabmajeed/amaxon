@@ -51,20 +51,37 @@ export default class cart extends Component {
      }
 
     }
+    handleimageclick=(id)=>{
+     return ()=>{
+      this.props.history.push(`/${id}`)
+
+     }
+ 
+
+    }
 
 
     render() {
        
         return (
-            <div>
-               {(!this.state.items)?("LOADING"):(<div>
+            <div><div>Loading</div><div>Loading</div>
+               {(!this.state.items)?(
+                 <div className="loading">
+                 <div className="dot dot1"></div>
+                 <div  className="dot dot2"></div>
+                 <div  className="dot dot3"></div>
+ 
+ 
+                </div>
+
+               ):(<div>
                 <div className="items">
                     <h1>Shopping Cart</h1>
                     {
                      this.state.items.map((item)=>{
                          return(   <div className="cart-product" key={item.id}>
                              <div className="cart-details">
-                             <img src={require(item.img)}/>
+                             <img src={require(item.img)} onClick={this.handleimageclick}/>
                           <div>{item.name}
                              <div>
                                Qty:{item.qty}

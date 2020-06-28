@@ -19,7 +19,15 @@ export default class productpage extends Component {
     render() {
         return (
             <div >
-            {!this.state.product?(<div>Loading</div>):
+            {!this.state.product?(
+              <div className="loading">
+              <div className="dot dot1"></div>
+              <div  className="dot dot2"></div>
+              <div  className="dot dot3"></div>
+
+
+             </div>
+            ):
             
             
             (

@@ -8,7 +8,7 @@ export default class navbar extends Component {
     document.querySelector('.slidebar').classList.remove('open')
 }
 componentDidMount(){
-    Axios.get('http://localhost:4000/isauth',{withCredentials:true})
+    Axios.get('/isauth',{withCredentials:true})
     .then(({data})=>{
         if(data.msg){this.setState({auth:"false"})}
        else if(data.name){this.setState({auth:"true",name:data.name})}
@@ -18,7 +18,7 @@ componentDidMount(){
 
 }
 componentWillReceiveProps(props){
-  Axios.get('http://localhost:4000/isauth',{withCredentials:true})
+  Axios.get('/isauth',{withCredentials:true})
   .then(({data})=>{
       if(data.msg){this.setState({auth:"false"})}
      else if(data.name){this.setState({auth:"true",name:data.name})}

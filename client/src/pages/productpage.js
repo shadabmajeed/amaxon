@@ -5,7 +5,7 @@ export default class productpage extends Component {
    state={}
    componentDidMount()
    {
-       axios.get(`http://localhost:4000/product/?id=${this.props.match.params.id}`).then((res)=>{
+       axios.get(`/product/?id=${this.props.match.params.id}`).then((res)=>{
        
          this.setState({product:res.data})
        })

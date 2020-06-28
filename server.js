@@ -142,7 +142,7 @@ else
 
 app.get('/cart',async (req,res)=>{
 
-    if(!req.isAuthenticated()){res.send({auth:"false"})} 
+    if(!req.isAuthenticated()){return res.send({auth:"false"})} 
     const handlecart=async(cartitems)=>{
    
       const newcart=[]

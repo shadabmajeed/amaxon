@@ -10,7 +10,7 @@ export default class cart extends Component {
         const qty=search[1].split('&')[0]
         const id=search[search.length-1]
          Axios.post('/cart',{id,qty},{withCredentials:true}).then(res=>{
-            if(res.data.auth){<Redirect to="/"></Redirect>}
+            if(res.data.auth){this.props.history.push('/')}
             else
            
             this.setState({items:res.data})
@@ -20,7 +20,7 @@ export default class cart extends Component {
 
         Axios.get('/cart',{withCredentials:true}).then(res=>{
            
-          if(res.data.auth){<Redirect to="/"></Redirect>}
+          if(res.data.auth){this.props.history.push('/')}
           else
           this.setState({items:res.data})
         }

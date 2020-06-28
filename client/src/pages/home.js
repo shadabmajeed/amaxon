@@ -20,7 +20,7 @@ export default class home extends Component {
 
   }
     render() {
-           console.log(this.state)
+         
         return (
             <div >
                 {(!this.state.products)?(<h1>Loading</h1>):

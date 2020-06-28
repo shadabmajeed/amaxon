@@ -12,7 +12,7 @@ export default class cart extends Component {
          Axios.post('/cart',{id,qty},{withCredentials:true}).then(res=>{
             if(res.data.auth){this.props.history.push('/')}
             else
-           
+             console.log(res)
             this.setState({items:res.data})
          })
        }
@@ -22,6 +22,7 @@ export default class cart extends Component {
            
           if(res.data.auth){this.props.history.push('/')}
           else
+          
           this.setState({items:res.data})
         }
         )
@@ -36,13 +37,30 @@ export default class cart extends Component {
    
 
   }
+  changeqty=(id,qty)=>{
+    
+      console.log("reaching")
+     
+      Axios.post('/cart',{id,qty},{withCredentials:true}).then(res=>{
+        if(res.data.auth){this.props.history.push('/')}
+  else
+       
+        this.setState({items:res.data})
+     })
+
+
+
+    
+
+
+  }
     state={
         
     }
     deleteitem=(id)=>{
         
      return()=>{
-       
+      const val=document.querySelector('select').value;
     Axios.post('/cart/delete',{id},{withCredentials:true}).then((res)=>{
     this.setState({items:res.data})
 
@@ -81,10 +99,12 @@ export default class cart extends Component {
                      this.state.items.map((item)=>{
                          return(   <div className="cart-product" key={item.id}>
                              <div className="cart-details">
-                             <img src={require(item.img)} onClick={this.handleimageclick}/>
+                             <img src={require(item.img)} onClick={this.handleimageclick(item.id)}/>
                           <div>{item.name}
                              <div>
-                               Qty:{item.qty}
+                       Qty:<select value={item.qty}  onChange={(e)=>{this.changeqty(item.id,e.target.value)}}>
+                      {[...Array(item.totalqty)].map((vals,val)=>{return(<option val={val+1} key={val+1}>{val+1}</option>)})}
+                    </select>
                                <br></br>
                                <button onClick={this.deleteitem(item.id)}>Delete</button> 
    

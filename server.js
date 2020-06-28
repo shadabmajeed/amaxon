@@ -102,7 +102,7 @@ else
       for(i=0;i<cartitems.length;i++)
       {  try{const pro=await product.findOne({_id:cartitems[i].id})
                if(pro){
-                 newcart.push({id:cartitems[i].id,qty:cartitems[i].qty,name:pro.name,img:pro.img,price:pro.price})
+                 newcart.push({id:cartitems[i].id,qty:cartitems[i].qty,name:pro.name,img:pro.img,price:pro.price,totalqty:pro.qty})
                }   
            
            }
@@ -149,7 +149,7 @@ app.get('/cart',async (req,res)=>{
         for(i=0;i<cartitems.length;i++)
         {  try{const pro=await product.findOne({_id:cartitems[i].id})
                  if(pro){
-                   newcart.push({id:cartitems[i].id,qty:cartitems[i].qty,name:pro.name,img:pro.img,price:pro.price})
+                   newcart.push({id:cartitems[i].id,qty:cartitems[i].qty,name:pro.name,img:pro.img,price:pro.price,totalqty:pro.qty})
                  }   
              
              }

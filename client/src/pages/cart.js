@@ -28,7 +28,7 @@ export default class cart extends Component {
        }
     }
   componentWillReceiveProps(props){
-    Axios.get(`/cart`).then(res=>{
+    Axios.get('/cart',{withCredentials:true}).then(res=>{
           
         this.setState({items:res.data})
     }

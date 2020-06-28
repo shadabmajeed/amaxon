@@ -9,7 +9,7 @@ export default class cart extends Component {
        { const search=this.props.location.search.split('=')
         const qty=search[1].split('&')[0]
         const id=search[search.length-1]
-         Axios.post('/cart',{id,qty},{withCredentials:true}).then(res=>{
+         Axios.post('http://localhost:3000/cart',{id,qty},{withCredentials:true}).then(res=>{
             if(res.data.auth){this.props.history.push('/')}
             else
            

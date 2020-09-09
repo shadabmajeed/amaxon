@@ -15,7 +15,7 @@ credentials:true
 }))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-mongoose.connect('mongodb+srv://shadab:shadab@cluster0-vn19w.mongodb.net/amaxonusers?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true}).then(
+mongoose.connect('mongodb+srv://shadab:sadab@cluster0-vn19w.mongodb.net/amaxonusers?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true}).then(
  ()=>{ console.log('db connected')}   
 
 ).catch(err=>{console.log(err)})
